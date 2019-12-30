@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "parseCharString.h"
+#include "braille.h"
 
 int main()
 {
-    ParseString("HELLO WORLD AND CAPGEMINI");
+    ParseString("HELLO WORLD");
     return 0;
 }
