@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "braille.h"
+#include "braille/braille.h"
 
 int main()
 {
