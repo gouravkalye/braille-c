@@ -20,10 +20,11 @@ void PrintString(void)
             if(charPerLine[lineNo][charNo] == 1)
             {
                 printf("*");
+                printf(" ");
             }
             else
             {
-                printf(" ");
+                printf("  ");
             }
             //printf("%x ",charPerLine[lineNo][charNo]);
             if(charNo%2 != 0)
