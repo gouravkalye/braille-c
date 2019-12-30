@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: make
-      run: gcc main.c -o out
+      run: gcc main.c braille/braille.c -o out
     - name: check
       run: ./out
     - name: date
