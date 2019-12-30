@@ -5,6 +5,6 @@
 
 int main()
 {
-    ParseString("HELLO WORLD");
+    ParseString("HELLO WORLD WELCOME TO BRAILLE");
     return 0;
 }
