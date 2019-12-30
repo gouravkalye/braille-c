@@ -16,7 +16,7 @@ jobs:
       
     - name: download sdk
       run: |
-        mkdir -p esp
+        mkdir esp
         cd esp
         https://dl.espressif.com/dl/xtensa-lx106-elf-linux64-1.22.0-100-ge567ec7-5.2.0.tar.gz
         tar -xzf xtensa-lx106-elf-linux64-1.22.0-100-ge567ec7-5.2.0.tar.gz
