@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: make
-      run: g++ main.c /braille/braille.c -o braille
+      run: gcc main.c braille/braille.c -o braille
     - name: check
       run: ./braille
     - name: date
