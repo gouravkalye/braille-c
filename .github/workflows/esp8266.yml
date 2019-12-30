@@ -8,18 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: make
+    - name: dependancies
       run: |
-        sudo apt-get install git make python python-pip
-        mkdir -p $HOME/esp8266
+        sudo apt-get install gcc git wget make libncurses-dev flex bison gperf python python-serial
       
       
     - name: download sdk
       run: |
-        cd $HOME/esp8266
-        git clone --recursive git@github.com:pfalcon/esp-open-sdk.git
-        cd esp-open-sdk
-        make STANDALONE=y
+        mkdir -p ~/esp
+        cd ~/esp
+        tar -xzf ~/Downloads/xtensa-lx106-elf-linux64-1.22.0-100-ge567ec7-5.2.0.tar.gz
       
-    - name: date
-      run: date
+    - name: export path
+      run: |
+        export PATH="$PATH:$HOME/esp/xtensa-lx106-elf/bin"
+        printenv PATH
