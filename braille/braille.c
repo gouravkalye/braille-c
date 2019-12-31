@@ -68,6 +68,7 @@ void PrintString(void)
                 // charNo--;
                 // printf("%d ",charNo);
             }
+        }
         charNo = 0;
         printf("\n");
         // move to next line of letter
