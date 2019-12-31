@@ -15,24 +15,59 @@ void PrintString(void)
     
     for(lineNo;lineNo <= MAX_LINE - 1;lineNo++)
     {
-        for(charNo;charNo <= MAX_CHAR - 1;charNo++)
+        if(lineNo%2 == 0)
         {
-            if(charPerLine[lineNo][charNo] == 1)
+            //while(charNo != MAX_CHAR)
+            for(charNo;charNo <= MAX_CHAR-1;charNo++)
             {
-                printf("*");
-                printf(" ");
-            }
-            else
-            {
-                printf("  ");
-            }
-            //printf("%x ",charPerLine[lineNo][charNo]);
-            if(charNo%2 != 0)
-            {
-               printf(" "); 
-               // add space between two letter
+                if(charPerLine[lineNo][charNo] == 1)
+                {
+                    printf("* ");
+                }
+                else
+                {
+                    printf("- ");
+                }
+                //printf("%x ",charPerLine[lineNo][charNo]);
+                if(charNo%2 != 0)
+                {
+                  printf("  "); 
+                  // add space between two letter
+                }
+                // printf("%d ",charNo);
+                // charNo++;
             }
         }
+        else if(lineNo%2 != 0)
+        {
+            // while(charNo != 0)
+            for(charNo;charNo != 0;charNo--)
+            {
+                if(charPerLine[lineNo][charNo-1] == 1)
+                {
+                    // printf("*");// write right to left embossing
+                }
+                else
+                {
+                    // printf("-");// write right to left embossing 
+                }
+                if(charPerLine[lineNo][MAX_CHAR - charNo] == 1)
+                {
+                    printf("* ");// just for print in reverse order
+                }
+                else
+                {
+                    printf("- ");// just for print in reverse order
+                }
+                //printf("%x ",charPerLine[lineNo][charNo]);
+                if(charNo%2 != 0)
+                {
+                  printf("  "); 
+                  // add space between two letter
+                }
+                // charNo--;
+                // printf("%d ",charNo);
+            }
         charNo = 0;
         printf("\n");
         // move to next line of letter
