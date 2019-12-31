@@ -5,6 +5,6 @@
 
 int main()
 {
-    ParseString("HELLO");
+    ParseString("Happy new year");
     return 0;
 }
