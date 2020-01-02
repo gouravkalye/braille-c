@@ -5,10 +5,7 @@
 
 int main()
 {
-    while(1)
-    {
-        ParseString("HELLO WORLD");
-    }
+    ParseString("HELLO WORLD");
     return 0;
 }
 
