@@ -20,7 +20,7 @@ jobs:
       run: ./out
     - run: mkdir -p output
       
-    - run: cp build/*.exe output
+    - run: cp *.exe output
       
     - uses: actions/upload-artifact@v1
       with:
