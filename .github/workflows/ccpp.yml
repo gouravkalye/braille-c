@@ -15,6 +15,7 @@ jobs:
       run: |
         gcc main.c braille/braille.c -o out
         i686-w64-mingw32-gcc -o main32.exe main.c braille/braille.c
+        ls -ltr
     - name: check
       run: ./out
     - name: date
