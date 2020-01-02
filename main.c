@@ -3,15 +3,11 @@
 
 #include "braille/braille.h"
 
-char str[100];
-
 int main()
 {
     while(1)
     {
-        printf("Enter Text:\n");
-        scanf("%s",str);
-        ParseString(str);
+        ParseString("HELLO WORLD");
     }
     return 0;
 }
