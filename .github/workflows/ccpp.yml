@@ -8,9 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: install mingw
+      run: sudo apt-get install mingw-w64
     - uses: actions/checkout@v1
     - name: make
-      run: gcc main.c braille/braille.c -o out
+      run: |
+        gcc main.c braille/braille.c -o out
+        i686-w64-mingw32-gcc -o main32.exe main.c braille/braille.c
     - name: check
       run: ./out
     - name: date
