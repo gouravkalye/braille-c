@@ -3,9 +3,13 @@
 
 #include "braille/braille.h"
 
+char str[100];
+
 int main()
 {
-    ParseString("HELLO WORLD");
+    printf("Enter Text:\n");
+    scanf("%s",str);
+    ParseString(str);
     return 0;
 }
 
