@@ -14,9 +14,17 @@ jobs:
     - name: make
       run: |
         gcc main.c braille/braille.c -o out
-        i686-w64-mingw32-gcc -o main32.exe main.c braille/braille.c
+        i686-w64-mingw32-gcc -o braille.exe main.c braille/braille.c
         ls -ltr
     - name: check
       run: ./out
+    - run: mkdir -p output
+      
+    - run: cp build/*.exe output
+      
+    - uses: actions/upload-artifact@v1
+      with:
+        name: my-artifact
+        path: output
     - name: date
       run: date
