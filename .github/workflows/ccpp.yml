@@ -22,10 +22,6 @@ jobs:
       
 #    - run: cp *.exe output
       
-    - run: |
-        sudo apt-get install mailutils
-        echo "Message Body Here" | mailx -s "CI email Test" gouravkalye@gmail.com
-      
     - uses: actions/upload-artifact@v1
       with:
         name: my-artifact
