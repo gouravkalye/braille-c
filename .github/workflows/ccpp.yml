@@ -14,13 +14,17 @@ jobs:
     - name: make
       run: |
         gcc main.c braille/braille.c -o out
-        i686-w64-mingw32-gcc -o braille.exe main.c braille/braille.c
-        ls -ltr
+#        i686-w64-mingw32-gcc -o braille.exe main.c braille/braille.c
+
     - name: check
       run: ./out
     - run: mkdir -p output
       
-    - run: cp *.exe output
+#    - run: cp *.exe output
+      
+    - run: |
+        sudo apt-get install mailutils
+        echo "Message Body Here" | mailx -s "CI email Test" gouravkalye@gmail.com
       
     - uses: actions/upload-artifact@v1
       with:
